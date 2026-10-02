@@ -244,3 +244,15 @@ body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI"
  .navlinks.menu-open>.navcta{display:none!important}
  .navlinks.menu-open .css-user-icon{width:30px!important;height:30px!important;flex:none!important}
 }
+
+/* Nudge mobile Login row safely inside menu */
+@media(max-width:640px){
+ .navlinks.menu-open>.user-login{
+   padding-left:30px!important;
+   gap:10px!important;
+ }
+ .navlinks.menu-open>.user-login .css-user-icon{
+   margin-left:0!important;
+   flex:0 0 30px!important;
+ }
+}
