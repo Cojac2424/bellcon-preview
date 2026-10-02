@@ -405,3 +405,24 @@ body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI"
    padding:0!important;
  }
 }
+
+/* Match section headings to the approved blue used by $29.99 / 1 local number.
+   Applies at iPad/desktop and iPhone widths. */
+:root{--bellcon-approved-blue:#118fcb}
+:is(h1,h2,h3,.section-title,.price,.stat strong,.plan-price,.step-number,.eyebrow,.kicker){
+  color:var(--bellcon-approved-blue)!important;
+  background:none!important;
+  background-image:none!important;
+  -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  -webkit-text-fill-color:var(--bellcon-approved-blue)!important;
+  text-shadow:none!important;
+  filter:none!important;
+}
+/* Keep the main section headings/numbers identical across iPad and iPhone */
+@media(max-width:1024px){
+ :is(h1,h2,h3,.section-title,.price,.stat strong,.plan-price,.step-number,.eyebrow,.kicker){
+   color:var(--bellcon-approved-blue)!important;
+   -webkit-text-fill-color:var(--bellcon-approved-blue)!important;
+ }
+}
