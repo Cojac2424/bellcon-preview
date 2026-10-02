@@ -457,3 +457,39 @@ body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI"
    text-transform:none!important;
  }
 }
+
+/* Restore approved iPad two-tone BellCon blue fill and use it identically on iPhone */
+:root{
+  --bellcon-blue-top:#19b8ee;
+  --bellcon-blue-mid:#078fd0;
+  --bellcon-blue-bottom:#075b9e;
+}
+:is(.hero h1,.section h2,.section h3,.section-title,.price,.plan-price,.stat strong,.eyebrow,.kicker){
+  color:#078fd0!important;
+  background-image:linear-gradient(180deg,
+    var(--bellcon-blue-top) 0%,
+    var(--bellcon-blue-mid) 52%,
+    var(--bellcon-blue-bottom) 100%)!important;
+  background-color:transparent!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:none!important;
+  filter:none!important;
+}
+/* Same exact fill on iPhone — no mobile colour override */
+@media(max-width:640px){
+ :is(.hero h1,.section h2,.section h3,.section-title,.price,.plan-price,.stat strong,.eyebrow,.kicker){
+   color:#078fd0!important;
+   background-image:linear-gradient(180deg,
+     var(--bellcon-blue-top) 0%,
+     var(--bellcon-blue-mid) 52%,
+     var(--bellcon-blue-bottom) 100%)!important;
+   background-color:transparent!important;
+   -webkit-background-clip:text!important;
+   background-clip:text!important;
+   -webkit-text-fill-color:transparent!important;
+   text-shadow:none!important;
+   filter:none!important;
+ }
+}
