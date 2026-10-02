@@ -9,3 +9,15 @@ body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI"
 @media(prefers-reduced-motion:reduce){.globe-lines{animation:none}}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-brand{margin:-10px 0 45px}.globe{width:min(310px,72vw)}}
 @media(max-width:760px){.nav{min-height:68px}.brand-copy small{display:none}.user-login span:last-child{display:none}.user-login{display:flex!important}.navlinks{gap:10px}.navcta{padding:10px 13px}.hero h1{font-size:clamp(2.45rem,13vw,4rem)}}
+
+/* Layered BellCon globe: Earth turns horizontally while orbit stays fixed */
+.bellcon-earth{overflow:visible;isolation:isolate;background:radial-gradient(circle at 34% 28%,#22c55e 0 4%,#0d6946 24%,#052d2c 58%,#031823 77%)}
+.bellcon-earth:before{content:"";position:absolute;inset:0;border-radius:50%;z-index:5;pointer-events:none;background:radial-gradient(circle at 32% 27%,#ffffff38 0 4%,transparent 26%),linear-gradient(90deg,transparent 48%,#00152277 88%);box-shadow:inset -32px -16px 46px #00131bbb,inset 15px 5px 30px #68ffd322}
+.earth-map{position:absolute;inset:7%;border-radius:50%;overflow:hidden;z-index:2;background-repeat:repeat-x;background-size:200% 100%;opacity:.9;animation:earthTravel 34s linear infinite}
+.map-a{background-image:radial-gradient(ellipse at 18% 30%,#7cff8b 0 6%,transparent 7%),radial-gradient(ellipse at 28% 45%,#58dc6d 0 8%,transparent 9%),radial-gradient(ellipse at 39% 63%,#39b95b 0 8%,transparent 9%),radial-gradient(ellipse at 60% 27%,#83ff91 0 7%,transparent 8%),radial-gradient(ellipse at 71% 48%,#43c965 0 10%,transparent 11%),radial-gradient(ellipse at 82% 66%,#65e77b 0 6%,transparent 7%)}
+.map-b{animation-delay:-17s;opacity:.55;filter:blur(.4px);background-image:radial-gradient(ellipse at 12% 56%,#35b85a 0 5%,transparent 6%),radial-gradient(ellipse at 47% 34%,#75f38a 0 8%,transparent 9%),radial-gradient(ellipse at 67% 69%,#3fc45e 0 7%,transparent 8%),radial-gradient(ellipse at 91% 37%,#6bea7c 0 6%,transparent 7%)}
+.earth-grid{position:absolute;inset:3%;border-radius:50%;z-index:4;opacity:.7;background:repeating-linear-gradient(0deg,transparent 0 11%,#bffcff77 11.5% 12%),repeating-linear-gradient(90deg,transparent 0 11%,#bffcff66 11.5% 12%);mask-image:radial-gradient(circle,#000 0 69%,transparent 71%)}
+.orbit-ring{position:absolute;z-index:7;width:126%;height:45%;left:-13%;top:29%;border:8px solid #e9fbff;border-top-color:#3cbcf8;border-radius:50%;transform:rotate(-14deg);box-shadow:0 0 10px #fff,0 0 24px #079cff}
+.bellcon-earth .orbit-arrow{z-index:8;right:-17%;top:18%;font-size:clamp(80px,11vw,155px);transform:rotate(-18deg);position:absolute}
+@keyframes earthTravel{from{background-position:0 0}to{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.earth-map{animation:none}}
