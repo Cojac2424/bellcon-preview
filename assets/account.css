@@ -71,3 +71,21 @@ body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI"
 .approved-wordmark em{font-style:normal;font-size:clamp(.58rem,1.05vw,.86rem);letter-spacing:.28em;color:#43dfff;margin-top:14px}
 @media(max-width:900px){.approved-globe-shell{width:min(390px,72vw)}.approved-wordmark{width:min(560px,88vw)}}
 @media(max-width:640px){.approved-globe-shell{width:min(330px,82vw)}.approved-wordmark{width:90vw}.approved-wordmark strong{font-size:clamp(3rem,16vw,4.5rem)}.approved-wordmark small{letter-spacing:.35em}.approved-wordmark em{font-size:.58rem;letter-spacing:.2em}}
+
+/* Repair approved logo layout after legacy hero rules */
+.approved-logo-stage{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;min-width:0}
+.approved-globe-shell{display:block!important;flex:none!important;min-width:250px}
+.approved-wordmark{display:grid!important;position:relative!important;z-index:10;flex:none!important;white-space:normal!important}
+.approved-wordmark strong{display:block!important;white-space:nowrap!important}
+.approved-wordmark small,.approved-wordmark em{display:block!important;white-space:nowrap!important}
+@media(max-width:640px){
+ .navlinks.menu-open{z-index:1000!important;display:grid!important}
+ .navlinks.menu-open>a{display:flex!important}
+ .navlinks.menu-open .navcta{display:flex!important;justify-content:center}
+ .approved-logo-stage{width:100%!important;margin-top:30px!important}
+ .approved-globe-shell{width:min(330px,82vw)!important;min-width:260px!important;height:auto!important}
+ .approved-wordmark{width:min(360px,90vw)!important;margin-top:5px!important}
+ .approved-wordmark strong{font-size:clamp(3rem,15vw,4.4rem)!important}
+ .approved-wordmark small{font-size:.64rem!important;letter-spacing:.34em!important;margin:10px 0 13px!important}
+ .approved-wordmark em{font-size:.54rem!important;letter-spacing:.17em!important;margin-top:12px!important}
+}
