@@ -282,3 +282,26 @@ body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI"
    padding:0!important;
  }
 }
+
+/* Mobile menu: Login text first, account icon on its RIGHT, both fully inside panel */
+@media(max-width:640px){
+  .navlinks.menu-open>.user-login{
+    width:auto!important;
+    padding:0!important;
+    margin-left:76px!important;
+    margin-right:28px!important;
+    display:flex!important;
+    flex-direction:row-reverse!important;
+    justify-content:flex-end!important;
+    align-items:center!important;
+    gap:12px!important;
+    transform:none!important;
+  }
+  .navlinks.menu-open>.user-login .css-user-icon{
+    position:static!important;
+    inset:auto!important;
+    margin:0!important;
+    transform:none!important;
+    flex:0 0 30px!important;
+  }
+}
