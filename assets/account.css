@@ -426,3 +426,34 @@ body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI"
    -webkit-text-fill-color:var(--bellcon-approved-blue)!important;
  }
 }
+
+/* Keep iPhone display typography identical to iPad/desktop.
+   Mobile may reflow lines, but font face/weight/colour/effects are inherited unchanged. */
+@media(max-width:640px){
+ .hero h1,
+ .section h2,
+ .section h3,
+ .section-title,
+ .price,
+ .plan-price,
+ .stat strong,
+ .eyebrow,
+ .kicker{
+   font-family:var(--bellcon-display,Arial Black,Arial,sans-serif)!important;
+   font-weight:900!important;
+   font-style:normal!important;
+   letter-spacing:inherit!important;
+   color:var(--bellcon-approved-blue,#118fcb)!important;
+   background:none!important;
+   background-image:none!important;
+   -webkit-background-clip:border-box!important;
+   background-clip:border-box!important;
+   -webkit-text-fill-color:var(--bellcon-approved-blue,#118fcb)!important;
+   text-shadow:none!important;
+   filter:none!important;
+ }
+ /* Do not let an older mobile rule substitute a different hero-heading type treatment */
+ .hero h1{
+   text-transform:none!important;
+ }
+}
